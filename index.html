@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh" data-lang="zh" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReadyPlayer 头号玩家 — 用 AI 工具赚到钱 | Turn Vibe Coding into Revenue</title>
+<meta name="description" content="用 Claude/Codex 等 AI 工具创业创收的社区与技术支持。社区 + Agent 问答 + 与项目深度融合的工程支持,把你 vibe coding 的结果变成能运行、能赚钱的系统。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cline x1='14' y1='14' x2='14' y2='50' stroke='%232ea043' stroke-width='4'/%3E%3Cline x1='14' y1='14' x2='50' y2='32' stroke='%232ea043' stroke-width='4'/%3E%3Cline x1='14' y1='50' x2='50' y2='32' stroke='%232ea043' stroke-width='4'/%3E%3Ccircle cx='14' cy='14' r='8' fill='%233fb950'/%3E%3Ccircle cx='14' cy='50' r='8' fill='%233fb950'/%3E%3Ccircle cx='50' cy='32' r='8' fill='%2358a6ff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js"></script>
+</head>
+<body>
+
+<nav style="position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)">
+  <div class="navbar-inner" style="max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:24px">
+    <a href="#top" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--txt)">
+      <svg width="26" height="26" viewBox="0 0 64 64">
+        <line x1="14" y1="14" x2="14" y2="50" stroke="var(--acc-line)" stroke-width="4"></line>
+        <line x1="14" y1="14" x2="50" y2="32" stroke="var(--acc-line)" stroke-width="4"></line>
+        <line x1="14" y1="50" x2="50" y2="32" stroke="var(--acc-line)" stroke-width="4"></line>
+        <circle cx="14" cy="14" r="8" fill="var(--acc)"></circle>
+        <circle cx="14" cy="50" r="8" fill="var(--acc)"></circle>
+        <circle cx="50" cy="32" r="8" fill="var(--acc2)"></circle>
+      </svg>
+      <span style="font-family:'JetBrains Mono',monospace;font-weight:800;font-size:15px;letter-spacing:.5px">READYPLAYER<span style="color:var(--dim);font-weight:400">.network</span></span>
+    </a>
+    <div class="navbar-links" style="flex:1;display:flex;gap:22px;justify-content:flex-end;align-items:center;font-size:14px">
+      <a href="#stuck" class="navlink nav-sm-hide"><span class="zh">痛点</span><span class="en">Why</span></a>
+      <a href="#pricing" class="navlink nav-sm-hide"><span class="zh">会员</span><span class="en">Membership</span></a>
+      <a href="cases.html" class="navlink"><span class="zh">案例与知识库</span><span class="en">Cases &amp; KB</span></a>
+      <a href="#contact" class="nav-cta"><span class="zh">问 Agent ▸</span><span class="en">Ask the Agent ▸</span></a>
+    </div>
+    <div class="navbar-controls" style="display:flex;align-items:center;gap:10px">
+      <div style="display:flex;border:1px solid var(--line3);border-radius:6px;overflow:hidden;font-family:'JetBrains Mono',monospace;font-size:12px">
+        <button class="langbtn zh-btn" onclick="rpSetLang('zh')">中</button>
+        <button class="langbtn en-btn" onclick="rpSetLang('en')">EN</button>
+      </div>
+      <button class="themebtn" onclick="rpToggleTheme()" aria-label="theme"><span class="ic-dark">☀</span><span class="ic-light">☾</span></button>
+    </div>
+  </div>
+</nav>
+
+<header id="top" style="border-bottom:1px solid var(--line);background:radial-gradient(ellipse 900px 420px at 20% -10%, var(--glow), transparent)">
+  <div class="grid-hero" style="max-width:1080px;margin:0 auto;padding:84px 24px 72px">
+    <div>
+      <p style="margin:0 0 18px;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--acc);letter-spacing:2px">READYPLAYER · 头号玩家 · BAY AREA</p>
+      <div class="zh">
+        <h1 style="margin:0;font-size:46px;line-height:1.22;font-weight:900;letter-spacing:.5px;text-wrap:pretty">你已经会 vibe coding。<br>现在,把它变成<span style="color:var(--acc)">收入</span>。</h1>
+        <p style="margin:22px 0 0;color:var(--body);font-size:17px;max-width:520px;text-wrap:pretty">这里的头等话题只有一个:<b style="color:var(--txt)">怎么用 AI 工具赚到钱</b>。社区 + Agent 问答 + 与项目深度融合的工程支持(远程为主)——每一条打法都来自我们自己搭建、正在运行、正在收钱的系统。</p>
+      </div>
+      <div class="en">
+        <h1 style="margin:0;font-size:44px;line-height:1.18;font-weight:900;text-wrap:pretty">You can already vibe-code.<br>Now turn it into <span style="color:var(--acc)">revenue</span>.</h1>
+        <p style="margin:22px 0 0;color:var(--body);font-size:17px;max-width:520px;text-wrap:pretty">One topic, and one topic only: <b style="color:var(--txt)">making money with AI tools</b>. Community + agent Q&amp;A + engineering support embedded in your project (remote-first) — every playbook comes from systems we built, run, and get paid for.</p>
+      </div>
+      <div style="display:flex;gap:14px;margin-top:32px;flex-wrap:wrap">
+        <a href="#contact" class="btn-acc"><span class="zh">聊聊你的项目 →</span><span class="en">Talk about your project →</span></a>
+        <a href="#contact" class="btn-ghost"><span class="zh">先免费问 Agent</span><span class="en">Ask the agent first — free</span></a>
+      </div>
+      <p style="margin:18px 0 0;font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--dim)">✓ 中英双语 · ✓ 不承诺投资回报 · ✓ 案例真实可溯源</p>
+    </div>
+    <div style="background:#0d1117;border:1px solid #263040;border-radius:12px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.45);font-family:'JetBrains Mono',monospace;font-size:13.5px;line-height:1.9">
+      <div style="display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid #1c2530;background:#11161d">
+        <span style="width:10px;height:10px;border-radius:99px;background:#f85149;display:inline-block"></span>
+        <span style="width:10px;height:10px;border-radius:99px;background:#d29922;display:inline-block"></span>
+        <span style="width:10px;height:10px;border-radius:99px;background:#3fb950;display:inline-block"></span>
+        <span style="color:#8b949e;font-size:12px;margin-left:6px">readyplayer — zsh</span>
+      </div>
+      <div style="padding:18px 20px;color:#9daec2">
+        <div><span style="color:#3fb950">$</span> <span style="color:#e6edf3">npm install -g @decentnetwork/lan</span>
+          <button class="term-copy" data-copy="npm install -g @decentnetwork/lan">copy</button>
+        </div>
+        <div style="color:#586474">+ decentlan — P2P mesh, no accounts</div>
+        <div><span style="color:#3fb950">$</span> <span style="color:#e6edf3">agentnet init</span></div>
+        <div style="color:#3fb950">✓ 密钥即身份,无需注册</div>
+        <div style="margin-top:10px"><span style="color:#58a6ff">你:</span> side project 有人用了,怎么开始收钱?</div>
+        <div><span style="color:#3fb950">agent:</span> 先亮价格。不亮价格,你的每次回答都默认免费…<span style="display:inline-block;width:8px;height:16px;background:#3fb950;vertical-align:-3px;animation:blink 1.1s step-end infinite"></span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="stuck" style="border-bottom:1px solid var(--line)">
+  <div style="max-width:1080px;margin:0 auto;padding:72px 24px">
+    <p style="margin:0 0 10px;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--acc);letter-spacing:2px">01 / STUCK HERE?</p>
+    <h2 class="zh" style="margin:0 0 32px;font-size:30px;font-weight:900;text-wrap:pretty">Demo 很多,收入为零?<br>卡住你的从来不是代码。</h2>
+    <h2 class="en" style="margin:0 0 32px;font-size:30px;font-weight:900;text-wrap:pretty">Plenty of demos, zero revenue?<br>Code was never the blocker.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
+      <div style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;padding:26px">
+        <p style="margin:0 0 10px;font-family:'JetBrains Mono',monospace;color:var(--acc);font-weight:700;font-size:14px">last_mile</p>
+        <div class="zh"><h3 style="margin:0 0 8px;font-size:18px">最后一公里没人陪你走</h3><p style="margin:0;color:var(--dim);font-size:15px">Claude/Codex 帮你搓出了原型,但域名、部署、进程守护、日志备份——把 demo 变成 24 小时不宕机的系统,没人告诉你下一步。</p></div>
+        <div class="en"><h3 style="margin:0 0 8px;font-size:18px">Nobody walks the last mile with you</h3><p style="margin:0;color:var(--dim);font-size:15px">Claude/Codex got you a prototype — but domains, deploys, process supervision, logs and backups? Turning a demo into a system that runs 24/7 is a different job.</p></div>
+      </div>
+      <div style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;padding:26px">
+        <p style="margin:0 0 10px;font-family:'JetBrains Mono',monospace;color:var(--acc);font-weight:700;font-size:14px">free_to_paid</p>
+        <div class="zh"><h3 style="margin:0 0 8px;font-size:18px">有人用,没人付钱</h3><p style="margin:0;color:var(--dim);font-size:15px">不亮价格,你的每一次付出都默认免费。定价、收款通道、免费转付费的开关——这些都有章法,而且可以照抄。</p></div>
+        <div class="en"><h3 style="margin:0 0 8px;font-size:18px">Users, but no payers</h3><p style="margin:0;color:var(--dim);font-size:15px">No visible price means everything you do defaults to free. Pricing, payment rails, the free-to-paid switch — there's a playbook, and you can copy it.</p></div>
+      </div>
+      <div style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;padding:26px">
+        <p style="margin:0 0 10px;font-family:'JetBrains Mono',monospace;color:var(--acc);font-weight:700;font-size:14px">solo_founder</p>
+        <div class="zh"><h3 style="margin:0 0 8px;font-size:18px">一个人,没人商量</h3><p style="margin:0;color:var(--dim);font-size:15px">一人公司(OPC)最缺的不是工具,是一个既懂技术又懂变现、随时能开口问的圈子。</p></div>
+        <div class="en"><h3 style="margin:0 0 8px;font-size:18px">One-person company, zero sounding board</h3><p style="margin:0;color:var(--dim);font-size:15px">What a solo founder lacks isn't tools — it's a circle that understands both engineering and monetization, one question away.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="product" style="border-bottom:1px solid var(--line)">
+  <div style="max-width:1080px;margin:0 auto;padding:72px 24px">
+    <p style="margin:0 0 10px;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--acc);letter-spacing:2px">02 / WHAT YOU GET</p>
+    <h2 class="zh" style="margin:0 0 32px;font-size:30px;font-weight:900">社区 + Agent + 湾区线下,一套打通</h2>
+    <h2 class="en" style="margin:0 0 32px;font-size:30px;font-weight:900">Community + Agent + Bay Area hands-on, one loop</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
+      <div style="border:1px solid var(--line2);border-radius:12px;padding:26px;background:linear-gradient(180deg,var(--panel),var(--bg))">
+        <p style="margin:0 0 12px;font-family:'JetBrains Mono',monospace;color:var(--acc2);font-size:13px;font-weight:700">COMMUNITY</p>
+        <div class="zh"><h3 style="margin:0 0 8px;font-size:18px">同行者社交网络</h3><p style="margin:0;color:var(--dim);font-size:15px">真实案例、变现经验、正在赚钱的同行者。会员社交网络群与语音会议基于 decentlan 的群和会议支持,无账号、密钥即身份——社区本身就是产品演示。</p></div>
+        <div class="en"><h3 style="margin:0 0 8px;font-size:18px">A member social network</h3><p style="margin:0;color:var(--dim);font-size:15px">Real cases, monetization playbooks, peers who actually earn. Member groups and voice meetings run on decentlan groups &amp; meetings — no accounts, your key is your identity. The community is itself a product demo.</p></div>
+      </div>
+      <div style="border:1px solid var(--line2);border-radius:12px;padding:26px;background:linear-gradient(180deg,var(--panel),var(--bg))">
+        <p style="margin:0 0 12px;font-family:'JetBrains Mono',monospace;color:var(--acc2);font-size:13px;font-weight:700">AGENT</p>
+        <div class="zh"><h3 style="margin:0 0 8px;font-size:18px">不限量 Agent 问答</h3><p style="margin:0;color:var(--dim);font-size:15px">创业、变现、AI 工具、技术选型,随时问。背后是持续更新的知识库;实时语音问答已在路线图上。</p></div>
+        <div class="en"><h3 style="margin:0 0 8px;font-size:18px">Unlimited agent Q&amp;A</h3><p style="margin:0;color:var(--dim);font-size:15px">Ask anything — starting up, monetizing, AI tooling, stack choices. Backed by a continuously updated knowledge base; live voice Q&amp;A is on the roadmap.</p></div>
+      </div>
+      <div style="border:1px solid var(--line2);border-radius:12px;padding:26px;background:linear-gradient(180deg,var(--panel),var(--bg))">
+        <p style="margin:0 0 12px;font-family:'JetBrains Mono',monospace;color:var(--acc2);font-size:13px;font-weight:700">BAY AREA · IT INFRA</p>
+        <div class="zh"><h3 style="margin:0 0 8px;font-size:18px">湾区面对面陪跑</h3><p style="margin:0;color:var(--dim);font-size:15px">面对面/上门,把你的 vibe coding 变成能运行、能收钱的生产系统:部署、支付、安全、运维,AI+区块链全栈 20+ 年。</p></div>
+        <div class="en"><h3 style="margin:0 0 8px;font-size:18px">Face-to-face in the Bay Area</h3><p style="margin:0;color:var(--dim);font-size:15px">In person or on site: your vibe-coded project becomes a production system that earns — deploys, payments, security, ops. 20+ years of AI + blockchain full-stack.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="events" style="border-bottom:1px solid var(--line)">
+  <div style="max-width:1080px;margin:0 auto;padding:72px 24px">
+    <p style="margin:0 0 10px;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--acc);letter-spacing:2px">03 / BAY AREA EVENTS</p>
+    <div class="grid-events">
+      <div style="min-width:0">
+        <div class="zh">
+          <h2 style="margin:0 0 16px;font-size:30px;font-weight:900;text-wrap:pretty">湾区线下活动,<br>到场之前就知道该认识谁</h2>
+          <p style="margin:0 0 14px;color:var(--body);font-size:16px;text-wrap:pretty">会员自动收到湾区 <b style="color:var(--txt)">OPC / AI 创业</b>主题线下活动的通知推送——聚会、demo day、工作坊,不再靠刷时间线。</p>
+          <p style="margin:0;color:var(--body);font-size:16px;text-wrap:pretty">基于 decentlan 的创业者撮合:结合你 LinkedIn 上的创业经历,在 <b style="color:var(--txt)">Luma 活动</b>之上做匹配——谁和你互补、谁在做同赛道,进场前名单已经在手上。</p>
+        </div>
+        <div class="en">
+          <h2 style="margin:0 0 16px;font-size:30px;font-weight:900;text-wrap:pretty">Bay Area meetups —<br>know who to meet before you arrive</h2>
+          <p style="margin:0 0 14px;color:var(--body);font-size:16px;text-wrap:pretty">Members get push notifications for Bay Area <b style="color:var(--txt)">OPC / AI startup</b> events — meetups, demo days, workshops. No more timeline-scrolling.</p>
+          <p style="margin:0;color:var(--body);font-size:16px;text-wrap:pretty">Founder matching on decentlan: your LinkedIn startup track record, layered on top of <b style="color:var(--txt)">Luma events</b> — who complements you, who's in your lane. The list is in your hand before you walk in.</p>
+        </div>
+        <div style="display:flex;gap:10px;margin-top:22px;flex-wrap:wrap;font-family:'JetBrains Mono',monospace;font-size:12px">
+          <span style="border:1px solid var(--line3);border-radius:99px;padding:4px 12px;color:var(--dim)">EVENT ALERTS</span>
+          <span style="border:1px solid var(--line3);border-radius:99px;padding:4px 12px;color:var(--dim)">LINKEDIN × LUMA</span>
+          <span style="border:1px solid var(--line3);border-radius:99px;padding:4px 12px;color:var(--dim)">DECENTLAN GROUPS</span>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:150px 150px;gap:12px">
+        <div style="grid-row:1/3"><img src="assets/meetup-1.jpg" alt="Bay Area AI meetup talk" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block"></div>
+        <img src="assets/meetup-2.jpg" alt="Bay Area AI meetup audience" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block">
+        <img src="assets/meetup-3.avif" alt="community" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" style="border-bottom:1px solid var(--line)">
+  <div style="max-width:1080px;margin:0 auto;padding:72px 24px">
+    <p style="margin:0 0 10px;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--acc);letter-spacing:2px">04 / PRICING</p>
+    <h2 class="zh" style="margin:0 0 8px;font-size:30px;font-weight:900">两档会员,明码标价</h2>
+    <h2 class="en" style="margin:0 0 8px;font-size:30px;font-weight:900">Two tiers. Prices on the wall.</h2>
+    <p class="zh" style="margin:0 0 32px;color:var(--dim)">我们自己的打法第一条就是:先亮价格。</p>
+    <p class="en" style="margin:0 0 32px;color:var(--dim)">Rule one of our own playbook: show the price.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;align-items:stretch">
+      <div style="background:var(--panel);border:1px solid var(--line2);border-radius:14px;padding:30px;display:flex;flex-direction:column">
+        <h3 style="margin:0;font-size:19px;font-family:'JetBrains Mono',monospace">ONLINE</h3>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:40px;color:var(--txt);font-weight:800;margin:14px 0 2px">$19<span style="color:var(--dim);font-size:15px;font-weight:400"> /月 mo</span></div>
+        <ul style="padding-left:20px;color:var(--body);margin:16px 0 0;font-size:15px;flex:1">
+          <div class="zh">
+            <li style="margin:7px 0">Agent 不限量问答:创业 / 变现 / 技术选型</li>
+            <li style="margin:7px 0">会员社交网络:群 + 语音会议(基于 decentlan)</li>
+            <li style="margin:7px 0">湾区 OPC/AI 活动通知推送 + Luma 撮合</li>
+            <li style="margin:7px 0">知识库持续更新:工具、案例、变现打法</li>
+            <li style="margin:7px 0">实时语音问答(上线后自动包含)</li>
+          </div>
+          <div class="en">
+            <li style="margin:7px 0">Unlimited agent Q&amp;A: startup / monetization / stack</li>
+            <li style="margin:7px 0">Member network: groups + voice meetings (on decentlan)</li>
+            <li style="margin:7px 0">Bay Area event alerts + Luma founder matching</li>
+            <li style="margin:7px 0">Ever-growing knowledge base</li>
+            <li style="margin:7px 0">Live voice Q&amp;A (included at launch)</li>
+          </div>
+        </ul>
+        <a href="#contact" class="btn-outline-blue"><span class="zh">加入 Online</span><span class="en">Join Online</span></a>
+      </div>
+      <div style="background:var(--panel);border:1px solid var(--acc);border-radius:14px;padding:30px;display:flex;flex-direction:column;box-shadow:0 0 0 1px var(--acc-ring), 0 20px 50px var(--shadow)">
+        <h3 style="margin:0;font-size:19px;font-family:'JetBrains Mono',monospace;display:flex;align-items:center;gap:10px">CTO <span style="background:var(--acc);color:var(--on-acc);font-size:12px;font-weight:800;padding:2px 10px;border-radius:99px;font-family:'Noto Sans SC',sans-serif"><span class="zh">深度融合</span><span class="en">embedded</span></span></h3>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:40px;color:var(--acc);font-weight:800;margin:14px 0 2px">$1,000<span style="color:var(--dim);font-size:15px;font-weight:400"> /月起 from</span></div>
+        <p class="zh" style="margin:6px 0 0;color:var(--dim);font-size:14px">含 Online 全部内容。远程为主,全球可覆盖。</p>
+        <p class="en" style="margin:6px 0 0;color:var(--dim);font-size:14px">Includes everything in Online. Remote-first, available anywhere.</p>
+        <ul style="padding-left:20px;color:var(--body);margin:14px 0 0;font-size:15px;flex:1">
+          <div class="zh">
+            <li style="margin:7px 0"><b style="color:var(--txt)">一对一会议</b>,每月定额小时(远程)</li>
+            <li style="margin:7px 0">线下会议 —— <span style="color:var(--dim)">目前仅湾区</span></li>
+            <li style="margin:7px 0"><b style="color:var(--txt)">私有化开源模型部署</b>(你的硬件、你的数据,不出门)</li>
+            <li style="margin:7px 0"><b style="color:var(--txt)">私有服务器服务</b>:搭建、部署、运维、安全</li>
+            <li style="margin:7px 0">与你的项目<b style="color:var(--txt)">深度融合</b>(FDE 模式):把 vibe coding 变成能运行、能收钱的生产系统</li>
+            <li style="margin:7px 0">AI + 区块链全栈,20+ 年工程经验</li>
+          </div>
+          <div class="en">
+            <li style="margin:7px 0"><b style="color:var(--txt)">1-on-1 sessions</b>, fixed monthly hours (remote)</li>
+            <li style="margin:7px 0">In-person sessions — <span style="color:var(--dim)">Bay Area only, for now</span></li>
+            <li style="margin:7px 0"><b style="color:var(--txt)">Private open-source model deployment</b> — your hardware, your data, nothing leaves</li>
+            <li style="margin:7px 0"><b style="color:var(--txt)">Private server service</b>: build, deploy, operate, secure</li>
+            <li style="margin:7px 0"><b style="color:var(--txt)">Embedded in your project</b> (FDE model): vibe coding → a production system that earns</li>
+            <li style="margin:7px 0">AI + blockchain full-stack, 20+ years</li>
+          </div>
+        </ul>
+        <a href="#contact" class="btn-fill-acc"><span class="zh">聊聊你的项目 →</span><span class="en">Talk about your project →</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="border-bottom:1px solid var(--line);background:radial-gradient(ellipse 700px 300px at 80% 0%, var(--glow), transparent)">
+  <div style="max-width:1080px;margin:0 auto;padding:72px 24px">
+    <p style="margin:0 0 10px;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--acc);letter-spacing:2px">04 / GET IN TOUCH</p>
+    <h2 class="zh" style="margin:0 0 8px;font-size:30px;font-weight:900">用你自己的密钥联系我们</h2>
+    <h2 class="en" style="margin:0 0 8px;font-size:30px;font-weight:900">Reach us with your own key</h2>
+    <p class="zh" style="margin:0 0 28px;color:var(--dim);max-width:660px">不用注册、不用账号、不用留手机号。装上 decentlan,你的设备自己生成一对密钥——那就是你的身份。加我们好友,直接聊。<b style="color:var(--txt)">这本身就是我们卖的东西的演示</b>。</p>
+    <p class="en" style="margin:0 0 28px;color:var(--dim);max-width:660px">No signup, no account, no phone number. Install decentlan and your device mints its own keypair — that is your identity. Add us as a friend and talk. <b style="color:var(--txt)">The contact channel is itself the product demo.</b></p>
+    <div class="grid-contact" style="display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;gap:14px;align-items:flex-start"><span style="font-family:'JetBrains Mono',monospace;color:var(--acc);font-weight:800;font-size:13px;padding-top:2px">01</span><div>
+          <b class="zh">安装 decentlan</b><b class="en">Install decentlan</b>
+          <p class="zh" style="margin:4px 0 0;color:var(--dim);font-size:14.5px">按系统选安装指南:<a href="https://beagle.chat/zh/docs/install-windows-native/" target="_blank" rel="noopener" style="color:var(--acc2)">Windows 原生(免 WSL)↗</a> · <a href="https://beagle.chat/zh/docs/install-macos/" target="_blank" rel="noopener" style="color:var(--acc2)">macOS ↗</a> · <a href="https://beagle.chat/zh/docs/install-linux/" target="_blank" rel="noopener" style="color:var(--acc2)">Linux ↗</a>。装完运行 <code style="font-family:'JetBrains Mono',monospace;color:var(--acc)">agentnet ui</code>,浏览器打开 <a href="http://localhost:8765" target="_blank" rel="noopener" style="color:var(--acc2)">localhost:8765</a>。</p>
+          <p class="en" style="margin:4px 0 0;color:var(--dim);font-size:14.5px">Pick your install guide: <a href="https://beagle.chat/en/docs/install-windows-native/" target="_blank" rel="noopener" style="color:var(--acc2)">Windows native (no WSL) ↗</a> · <a href="https://beagle.chat/en/docs/install-macos/" target="_blank" rel="noopener" style="color:var(--acc2)">macOS ↗</a> · <a href="https://beagle.chat/en/docs/install-linux/" target="_blank" rel="noopener" style="color:var(--acc2)">Linux ↗</a>. Then run <code style="font-family:'JetBrains Mono',monospace;color:var(--acc)">agentnet ui</code> and open <a href="http://localhost:8765" target="_blank" rel="noopener" style="color:var(--acc2)">localhost:8765</a>.</p>
+        </div></div>
+        <div style="display:flex;gap:14px;align-items:flex-start"><span style="font-family:'JetBrains Mono',monospace;color:var(--acc);font-weight:800;font-size:13px;padding-top:2px">02</span><div>
+          <b class="zh">加我们好友</b><b class="en">Add us as a friend</b>
+          <p class="zh" style="margin:4px 0 0;color:var(--dim);font-size:14.5px">在聊天界面点"添加好友",粘贴下面这个地址。</p>
+          <p class="en" style="margin:4px 0 0;color:var(--dim);font-size:14.5px">Click Add Friend in the chat UI and paste the address below.</p>
+        </div></div>
+        <div style="display:flex;gap:14px;align-items:flex-start"><span style="font-family:'JetBrains Mono',monospace;color:var(--acc);font-weight:800;font-size:13px;padding-top:2px">03</span><div>
+          <b class="zh">直接说你想聊什么</b><b class="en">Just say what you need</b>
+          <p class="zh" style="margin:4px 0 0;color:var(--dim);font-size:14.5px">会员咨询、CTO 套餐(远程 1:1 / 私有化部署 / 私有服务器)、或者先免费问一个"怎么把它变成收入"的问题——都在同一个对话里。</p>
+          <p class="en" style="margin:4px 0 0;color:var(--dim);font-size:14.5px">Membership, the CTO tier (remote 1-on-1 / private model deployment / private servers), or one free "how do I turn this into revenue" question — same conversation.</p>
+        </div></div>
+      </div>
+      <div style="background:#0d1117;border:1px solid #263040;border-radius:12px;padding:20px;font-family:'JetBrains Mono',monospace;box-shadow:0 16px 40px rgba(0,0,0,.35)">
+        <p style="margin:0 0 8px;font-size:11.5px;color:#8b949e;letter-spacing:1px">READYPLAYER · DECENT ADDRESS</p>
+        <div style="word-break:break-all;font-size:12.5px;line-height:1.7;color:#3fb950">38XWDDxSJ7MqApYae4i2wB6vuuqgjFmKUtQtha8cveNPiUB5HWWW</div>
+        <button class="term-copy" style="float:none;margin-top:12px" data-copy="38XWDDxSJ7MqApYae4i2wB6vuuqgjFmKUtQtha8cveNPiUB5HWWW">copy address</button>
+        <p style="margin:14px 0 0;font-size:12px;color:#586474;font-family:'Noto Sans SC',sans-serif;line-height:1.6">
+          <span class="zh">陌生身份只能发好友请求,未通过前无法向我们的机器发消息——这是协议保证的,不是设置项。</span>
+          <span class="en">An unknown identity can only send a friend request; it cannot route a message to our machine until accepted. That is the protocol, not a setting.</span>
+        </p>
+      </div>
+    </div>
+    <p style="margin:26px 0 0;color:var(--dim);font-size:14px">
+      <span class="zh">还不想装?也可以发邮件 <a href="mailto:wli@readyplayer.network" style="color:var(--acc2)">wli@readyplayer.network</a>——但装一次 decentlan,你就顺手用上了我们在卖的东西。</span>
+      <span class="en">Not ready to install? Email <a href="mailto:wli@readyplayer.network" style="color:var(--acc2)">wli@readyplayer.network</a> — but installing once means you are already using what we sell.</span>
+    </p>
+  </div>
+</section>
+
+<section id="proof" style="border-bottom:1px solid var(--line)">
+  <div style="max-width:1080px;margin:0 auto;padding:72px 24px">
+    <p style="margin:0 0 10px;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--acc);letter-spacing:2px">05 / PROOF OF WORK</p>
+    <h2 class="zh" style="margin:0 0 8px;font-size:30px;font-weight:900">不是课件,是库存</h2>
+    <h2 class="en" style="margin:0 0 8px;font-size:30px;font-weight:900">Not courseware. Inventory.</h2>
+    <p class="zh" style="margin:0 0 32px;color:var(--dim);max-width:640px">下面每一件都是我们自己搭建、正在运行的系统:你可以直接买来用,也可以学着做。</p>
+    <p class="en" style="margin:0 0 32px;color:var(--dim);max-width:640px">Everything below is a system we built and run today: buy it and use it, or learn how it's made.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px">
+      <a class="card-hover" href="https://interview.network" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><b style="color:var(--acc2);font-family:'JetBrains Mono',monospace;font-size:14px">interview.network ↗</b><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--acc);border:1px solid var(--acc-soft);border-radius:99px;padding:1px 8px">正在收费</span></div>
+        <p class="zh" style="margin:0;color:var(--dim);font-size:14px">声音克隆 + 中文配音,GPU 打印店模式,按分钟计费,真实付费用户。</p>
+        <p class="en" style="margin:0;color:var(--dim);font-size:14px">Voice cloning + Chinese dubbing. GPU print-shop model, billed by the minute, real paying users.</p>
+      </a>
+      <a class="card-hover" href="https://beagle.chat" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><b style="color:var(--acc2);font-family:'JetBrains Mono',monospace;font-size:14px">decentlan / beagle ↗</b><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--acc);border:1px solid var(--acc-soft);border-radius:99px;padding:1px 8px">npm 发布</span></div>
+        <p class="zh" style="margin:0;color:var(--dim);font-size:14px">无账号 P2P 组网,个人创业者和小团队自己的网络。本社区就跑在上面。</p>
+        <p class="en" style="margin:0;color:var(--dim);font-size:14px">Account-free P2P networking for solo founders and small teams. This community runs on it.</p>
+      </a>
+      <a class="card-hover" href="https://btc.fi.chat" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><b style="color:var(--acc2);font-family:'JetBrains Mono',monospace;font-size:14px">AI 交易系统 ↗</b><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--acc);border:1px solid var(--acc-soft);border-radius:99px;padding:1px 8px">全自动</span></div>
+        <p class="zh" style="margin:0;color:var(--dim);font-size:14px">多 agent 信号 + 执行 + 复盘,全自动运行,数据全程可审计。看实时看板 →</p>
+        <p class="en" style="margin:0;color:var(--dim);font-size:14px">Multi-agent signals + execution + review. Fully automated, fully auditable. See the live dashboard →</p>
+      </a>
+      <div class="card-hover">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><b style="color:var(--acc2);font-family:'JetBrains Mono',monospace;font-size:14px">Agent 协作网</b><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--acc);border:1px solid var(--acc-soft);border-radius:99px;padding:1px 8px">本站出品</span></div>
+        <p class="zh" style="margin:0;color:var(--dim);font-size:14px">Claude/Codex 多 agent 跨机协作干活——你现在看到的这个网站就是它们的作品。</p>
+        <p class="en" style="margin:0;color:var(--dim);font-size:14px">Claude/Codex agents collaborating across machines — the site you're reading is their work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="channel" style="border-bottom:1px solid var(--line)">
+  <div class="grid-channel" style="max-width:1080px;margin:0 auto;padding:72px 24px">
+    <div>
+      <p style="margin:0 0 10px;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--acc);letter-spacing:2px">06 / CASE CHANNEL</p>
+      <div class="zh"><h2 style="margin:0 0 8px;font-size:30px;font-weight:900">先行者案例频道</h2><p style="margin:0;color:var(--dim);max-width:600px">用我们自己的声音克隆管线,翻译并介绍用 AI 工具创业的早期成功者。首批 3 期制作中。</p></div>
+      <div class="en"><h2 style="margin:0 0 8px;font-size:30px;font-weight:900">The early-winners channel</h2><p style="margin:0;color:var(--dim);max-width:600px">Stories of early AI-tool entrepreneurs, translated and produced with our own voice-cloning pipeline. First 3 episodes in production.</p></div>
+    </div>
+    <a href="cases.html" class="btn-ghost-green"><span class="zh">案例与知识库 →</span><span class="en">Cases &amp; knowledge base →</span></a>
+  </div>
+</section>
+
+<footer style="padding:48px 24px;color:var(--dim);font-size:13.5px">
+  <div style="max-width:1080px;margin:0 auto;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center">
+    <div style="display:flex;align-items:center;gap:10px">
+      <svg width="20" height="20" viewBox="0 0 64 64">
+        <line x1="14" y1="14" x2="14" y2="50" stroke="var(--acc-line)" stroke-width="4"></line>
+        <line x1="14" y1="14" x2="50" y2="32" stroke="var(--acc-line)" stroke-width="4"></line>
+        <line x1="14" y1="50" x2="50" y2="32" stroke="var(--acc-line)" stroke-width="4"></line>
+        <circle cx="14" cy="14" r="8" fill="var(--acc)"></circle>
+        <circle cx="14" cy="50" r="8" fill="var(--acc)"></circle>
+        <circle cx="50" cy="32" r="8" fill="var(--acc2)"></circle>
+      </svg>
+      <span style="font-family:'JetBrains Mono',monospace">readyplayer.network · Wei Li (0xli) · <a href="mailto:wli@readyplayer.network">wli@readyplayer.network</a></span>
+    </div>
+    <span>湾区面对面 · 中英双语 · 不承诺投资回报,案例真实可溯源</span>
+  </div>
+</footer>
+
+</body>
+</html>

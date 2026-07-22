@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh" data-lang="zh" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>案例与知识库 — ReadyPlayer 头号玩家 | Cases &amp; Knowledge Base</title>
+<meta name="description" content="ReadyPlayer 案例与知识库:自建正在运行的系统、每天在用的 AI 工具栈、先行者案例频道、公开变现打法。知识库是 git 仓库,更新即提交。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cline x1='14' y1='14' x2='14' y2='50' stroke='%232ea043' stroke-width='4'/%3E%3Cline x1='14' y1='14' x2='50' y2='32' stroke='%232ea043' stroke-width='4'/%3E%3Cline x1='14' y1='50' x2='50' y2='32' stroke='%232ea043' stroke-width='4'/%3E%3Ccircle cx='14' cy='14' r='8' fill='%233fb950'/%3E%3Ccircle cx='14' cy='50' r='8' fill='%233fb950'/%3E%3Ccircle cx='50' cy='32' r='8' fill='%2358a6ff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js"></script>
+</head>
+<body>
+
+<nav style="position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)">
+  <div class="navbar-inner" style="max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:24px">
+    <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--txt)">
+      <svg width="26" height="26" viewBox="0 0 64 64">
+        <line x1="14" y1="14" x2="14" y2="50" stroke="var(--acc-line)" stroke-width="4"></line>
+        <line x1="14" y1="14" x2="50" y2="32" stroke="var(--acc-line)" stroke-width="4"></line>
+        <line x1="14" y1="50" x2="50" y2="32" stroke="var(--acc-line)" stroke-width="4"></line>
+        <circle cx="14" cy="14" r="8" fill="var(--acc)"></circle>
+        <circle cx="14" cy="50" r="8" fill="var(--acc)"></circle>
+        <circle cx="50" cy="32" r="8" fill="var(--acc2)"></circle>
+      </svg>
+      <span style="font-family:'JetBrains Mono',monospace;font-weight:800;font-size:15px;letter-spacing:.5px">READYPLAYER<span style="color:var(--dim);font-weight:400">.network</span></span>
+    </a>
+    <div class="navbar-links" style="flex:1;display:flex;gap:22px;justify-content:flex-end;align-items:center;font-size:14px">
+      <a href="index.html" class="navlink"><span class="zh">首页</span><span class="en">Home</span></a>
+      <a href="index.html#pricing" class="navlink nav-sm-hide"><span class="zh">会员</span><span class="en">Membership</span></a>
+      <a href="index.html#contact" class="nav-cta"><span class="zh">问 Agent ▸</span><span class="en">Ask the Agent ▸</span></a>
+    </div>
+    <div class="navbar-controls" style="display:flex;align-items:center;gap:10px">
+      <div style="display:flex;border:1px solid var(--line3);border-radius:6px;overflow:hidden;font-family:'JetBrains Mono',monospace;font-size:12px">
+        <button class="langbtn zh-btn" onclick="rpSetLang('zh')">中</button>
+        <button class="langbtn en-btn" onclick="rpSetLang('en')">EN</button>
+      </div>
+      <button class="themebtn" onclick="rpToggleTheme()" aria-label="theme"><span class="ic-dark">☀</span><span class="ic-light">☾</span></button>
+    </div>
+  </div>
+</nav>
+
+<header style="border-bottom:1px solid var(--line);background:radial-gradient(ellipse 900px 380px at 80% -10%, var(--glow2), transparent)">
+  <div style="max-width:1080px;margin:0 auto;padding:64px 24px 56px">
+    <p style="margin:0 0 12px;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--acc);letter-spacing:2px">CASES &amp; KNOWLEDGE BASE</p>
+    <div class="zh"><h1 style="margin:0;font-size:38px;font-weight:900">案例与知识库</h1><p style="margin:14px 0 0;color:var(--body);max-width:620px;text-wrap:pretty">所有内容来自正在运行的系统和真实可溯源的案例。知识库是 git 仓库,更新即提交——你看到的永远是最新版。</p></div>
+    <div class="en"><h1 style="margin:0;font-size:38px;font-weight:900">Cases &amp; Knowledge Base</h1><p style="margin:14px 0 0;color:var(--body);max-width:620px;text-wrap:pretty">Everything here comes from running systems and traceable cases. The KB is a git repo — every update is a commit, so you're always reading the latest.</p></div>
+  </div>
+</header>
+
+<section style="border-bottom:1px solid var(--line)">
+  <div style="max-width:1080px;margin:0 auto;padding:64px 24px">
+    <p style="margin:0 0 10px;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--acc);letter-spacing:2px">01 / RUNNING SYSTEMS</p>
+    <h2 class="zh" style="margin:0 0 28px;font-size:28px;font-weight:900">自建系统:既是商品,也是能力证明</h2>
+    <h2 class="en" style="margin:0 0 28px;font-size:28px;font-weight:900">Our systems: inventory and proof in one</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
+      <a class="case-card" href="https://interview.network" target="_blank" rel="noopener" style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;padding:26px;text-decoration:none;color:inherit;display:block">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><b style="color:var(--acc2);font-family:'JetBrains Mono',monospace;font-size:15px">interview.network ↗</b><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--acc);border:1px solid var(--acc-soft);border-radius:99px;padding:1px 8px">正在收费</span></div>
+        <p class="zh" style="margin:0;color:var(--dim);font-size:14.5px">声音克隆 + 中文配音服务。GPU 打印店模式:设备一次投入,按分钟计费,真实付费用户。可以直接下单体验,也可以照着做一个你自己的。</p>
+        <p class="en" style="margin:0;color:var(--dim);font-size:14.5px">Voice cloning + Chinese dubbing. The GPU print-shop model: buy the hardware once, bill by the minute, real paying users. Order a job — or build your own copy.</p>
+      </a>
+      <a class="case-card" href="https://beagle.chat" target="_blank" rel="noopener" style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;padding:26px;text-decoration:none;color:inherit;display:block">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><b style="color:var(--acc2);font-family:'JetBrains Mono',monospace;font-size:15px">decentlan / beagle ↗</b><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--acc);border:1px solid var(--acc-soft);border-radius:99px;padding:1px 8px">npm 发布</span></div>
+        <p class="zh" style="margin:0;color:var(--dim);font-size:14.5px">无账号 P2P 组网,密钥即身份。会员的社交网络群和语音会议就跑在 decentlan 的群与会议上。<span style="font-family:'JetBrains Mono',monospace;color:var(--acc)">npm install -g @decentnetwork/lan</span></p>
+        <p class="en" style="margin:0;color:var(--dim);font-size:14.5px">Account-free P2P networking — your key is your identity. The member social network runs on decentlan groups and meetings. <span style="font-family:'JetBrains Mono',monospace;color:var(--acc)">npm install -g @decentnetwork/lan</span></p>
+      </a>
+      <a class="case-card" href="https://btc.fi.chat" target="_blank" rel="noopener" style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;padding:26px;text-decoration:none;color:inherit;display:block">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><b style="color:var(--acc2);font-family:'JetBrains Mono',monospace;font-size:15px">AI 交易系统 ↗</b><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--acc);border:1px solid var(--acc-soft);border-radius:99px;padding:1px 8px">全自动</span></div>
+        <p class="zh" style="margin:0;color:var(--dim);font-size:14.5px">多 agent 分工:信号、执行、复盘。全自动运行,数据全程可审计——不承诺回报,只展示系统怎么搭。看实时看板 →</p>
+        <p class="en" style="margin:0;color:var(--dim);font-size:14.5px">Multi-agent division of labor: signals, execution, review. Fully automated, fully auditable — no return promises, just how the system is built. See the live dashboard →</p>
+      </a>
+      <div style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;padding:26px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><b style="color:var(--acc2);font-family:'JetBrains Mono',monospace;font-size:15px">Agent 协作网</b><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--acc);border:1px solid var(--acc-soft);border-radius:99px;padding:1px 8px">本站出品</span></div>
+        <p class="zh" style="margin:0;color:var(--dim);font-size:14.5px">Claude/Codex 多 agent 跨机协作:写代码、部署、维护知识库。这个网站从设计到上线就是它们的作品。</p>
+        <p class="en" style="margin:0;color:var(--dim);font-size:14.5px">Claude/Codex agents collaborating across machines — writing code, deploying, maintaining the KB. This site, design to launch, is their work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="border-bottom:1px solid var(--line)">
+  <div style="max-width:1080px;margin:0 auto;padding:64px 24px">
+    <p style="margin:0 0 10px;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--acc);letter-spacing:2px">02 / TOOL STACK · kb/tools/</p>
+    <div class="zh"><h2 style="margin:0 0 8px;font-size:28px;font-weight:900">我们每天在用的工具栈</h2><p style="margin:0 0 28px;color:var(--dim);max-width:640px">不评测、不带货。只讲我们自己每天用来干活、赚钱的组合,以及各自放在哪一层。</p></div>
+    <div class="en"><h2 style="margin:0 0 8px;font-size:28px;font-weight:900">The stack we actually use, daily</h2><p style="margin:0 0 28px;color:var(--dim);max-width:640px">No reviews, no affiliate links. Just the combination we work and earn with — and which layer each piece sits on.</p></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
+      <div style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;padding:26px">
+        <p style="margin:0 0 10px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--acc2);font-weight:700">VIBE CODING</p>
+        <h3 style="margin:0 0 8px;font-size:17px;font-family:'JetBrains Mono',monospace">Claude · Codex</h3>
+        <p class="zh" style="margin:0;color:var(--dim);font-size:14.5px">从想法到原型的引擎。我们所有系统的第一行代码都出自它们——会用是入场券,用好是分水岭。</p>
+        <p class="en" style="margin:0;color:var(--dim);font-size:14.5px">The idea-to-prototype engine. Every system here started as their output — using them is table stakes; using them well is the divide.</p>
+      </div>
+      <div style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;padding:26px">
+        <p style="margin:0 0 10px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--acc2);font-weight:700">AGENT 系统</p>
+        <h3 style="margin:0 0 8px;font-size:17px;font-family:'JetBrains Mono',monospace">OpenClaw · harness</h3>
+        <p class="zh" style="margin:0;color:var(--dim);font-size:14.5px">让 agent 长期、自动地干活的框架层:任务编排、多 agent 协作、跨机调度。我们的协作网和交易系统都构建在这一层。</p>
+        <p class="en" style="margin:0;color:var(--dim);font-size:14.5px">The framework layer that keeps agents working long-term and unattended: orchestration, multi-agent collaboration, cross-machine scheduling. Our collaboration net and trading system are built here.</p>
+      </div>
+      <div style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;padding:26px">
+        <p style="margin:0 0 10px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--acc2);font-weight:700">IT INFRA</p>
+        <h3 style="margin:0 0 8px;font-size:17px;font-family:'JetBrains Mono',monospace">decentlan · 自托管 GPU</h3>
+        <p class="zh" style="margin:0;color:var(--dim);font-size:14.5px">底座:无账号 P2P 组网、自托管 GPU(whisper/声音克隆)、看门狗与备份。让上面两层的产出能 24 小时跑着收钱。</p>
+        <p class="en" style="margin:0;color:var(--dim);font-size:14.5px">The foundation: account-free P2P networking, self-hosted GPUs (whisper / voice cloning), watchdogs and backups. It keeps the layers above running — and earning — 24/7.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="border-bottom:1px solid var(--line)">
+  <div style="max-width:1080px;margin:0 auto;padding:64px 24px">
+    <p style="margin:0 0 10px;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--acc);letter-spacing:2px">03 / CASE CHANNEL</p>
+    <div class="zh"><h2 style="margin:0 0 8px;font-size:28px;font-weight:900">先行者案例频道</h2><p style="margin:0 0 28px;color:var(--dim);max-width:640px">用 AI 工具创业、创收的真实先行者,精选自 <a href="https://interview.network" target="_blank" rel="noopener" style="color:var(--acc2)">interview.network</a>,并用我们自己的声音克隆管线制作中文版。点开看完整访谈。</p></div>
+    <div class="en"><h2 style="margin:0 0 8px;font-size:28px;font-weight:900">The early-winners channel</h2><p style="margin:0 0 28px;color:var(--dim);max-width:640px">Real people making money with AI tools — curated from <a href="https://interview.network" target="_blank" rel="noopener" style="color:var(--acc2)">interview.network</a> and dubbed with our own voice-cloning pipeline. Tap any card for the full interview.</p></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
+      <a class="case-card" href="https://interview.network/interview/y_ON1Qbb274" target="_blank" rel="noopener" style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column">
+        <img src="https://i.ytimg.com/vi/y_ON1Qbb274/hqdefault.jpg" alt="He Turned $400 Into $2.5M Using AI" loading="lazy" style="width:100%;height:158px;object-fit:cover;display:block">
+        <div style="padding:18px 20px">
+          <p style="margin:0 0 6px;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--acc)">John Cheney · Gen AIPI</p>
+          <h3 style="margin:0 0 8px;font-size:16px;line-height:1.35"><span class="zh">用 AI 把 $400 变成 $250 万(不写代码)</span><span class="en">He Turned $400 Into $2.5M Using AI (No Coding)</span></h3>
+          <p class="zh" style="margin:0;color:var(--dim);font-size:13.5px;line-height:1.5">用 Replit 等无代码工具搭 AI 咨询业务,一年内做到百万美元,帮没有 CTO 的公司落地 AI 自动化。</p>
+          <p class="en" style="margin:0;color:var(--dim);font-size:13.5px;line-height:1.5">No-code AI consulting to seven figures in under a year with Replit — shipping AI automation for companies with no CTO.</p>
+        </div>
+      </a>
+      <a class="case-card" href="https://interview.network/interview/32vqaJa90kw" target="_blank" rel="noopener" style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column">
+        <img src="https://i.ytimg.com/vi/32vqaJa90kw/hqdefault.jpg" alt="My Two Apps Make $150K/Month Each" loading="lazy" style="width:100%;height:158px;object-fit:cover;display:block">
+        <div style="padding:18px 20px">
+          <p style="margin:0 0 6px;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--acc)">Nicole · App Founder</p>
+          <h3 style="margin:0 0 8px;font-size:16px;line-height:1.35"><span class="zh">我的两个 App 各自月入 15 万美元</span><span class="en">My Two Apps Make $150K/Month Each</span></h3>
+          <p class="zh" style="margin:0;color:var(--dim);font-size:13.5px;line-height:1.5">用可复制的病毒式分发和 UGC 系统,做出多个月入六位数的消费级 App —— 靠体系,不靠运气。</p>
+          <p class="en" style="margin:0;color:var(--dim);font-size:13.5px;line-height:1.5">Repeatable viral distribution and UGC systems behind multiple six-figure-a-month consumer apps — system, not luck.</p>
+        </div>
+      </a>
+      <a class="case-card" href="https://interview.network/interview/Baa71rPgxvA" target="_blank" rel="noopener" style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column">
+        <img src="https://i.ytimg.com/vi/Baa71rPgxvA/hqdefault.jpg" alt="Build a Self-Running AI Company in 16 Minutes" loading="lazy" style="width:100%;height:158px;object-fit:cover;display:block">
+        <div style="padding:18px 20px">
+          <p style="margin:0 0 6px;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--acc)">Silicon Valley Girl</p>
+          <h3 style="margin:0 0 8px;font-size:16px;line-height:1.35"><span class="zh">16 分钟搭一家自运转的 AI 公司</span><span class="en">Build a Self-Running AI Company in 16 Minutes</span></h3>
+          <p class="zh" style="margin:0;color:var(--dim);font-size:13.5px;line-height:1.5">五层框架把 AI 嵌进公司运营:结构化数据、语音输入、定时 AI agent、自定义看板、自动反馈闭环。</p>
+          <p class="en" style="margin:0;color:var(--dim);font-size:13.5px;line-height:1.5">A five-layer framework to embed AI across operations — data, voice input, scheduled agents, dashboards, feedback loops.</p>
+        </div>
+      </a>
+      <a class="case-card" href="https://interview.network/interview/U7apPfqHgvg" target="_blank" rel="noopener" style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column">
+        <img src="https://i.ytimg.com/vi/U7apPfqHgvg/hqdefault.jpg" alt="$1.5B AI Founder: The ONE Rule for Building an AI Startup" loading="lazy" style="width:100%;height:158px;object-fit:cover;display:block">
+        <div style="padding:18px 20px">
+          <p style="margin:0 0 6px;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--acc)">Chris Pedreal · Granola</p>
+          <h3 style="margin:0 0 8px;font-size:16px;line-height:1.35"><span class="zh">15 亿美元 AI 创始人:2026 做 AI 创业的唯一铁律</span><span class="en">$1.5B AI Founder: The ONE Rule for an AI Startup in 2026</span></h3>
+          <p class="zh" style="margin:0;color:var(--dim);font-size:13.5px;line-height:1.5">Granola 靠极致产品质量自然增长,而非增长黑客 —— 在拥挤的 AI 市场里,卓越体验才是护城河。</p>
+          <p class="en" style="margin:0;color:var(--dim);font-size:13.5px;line-height:1.5">Granola grew organically on obsessive product quality, not growth hacks — in a crowded market, excellence is the moat.</p>
+        </div>
+      </a>
+      <a class="case-card" href="https://interview.network/interview/ZVMTeDBmSrI" target="_blank" rel="noopener" style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column">
+        <img src="https://i.ytimg.com/vi/ZVMTeDBmSrI/hqdefault.jpg" alt="I Re-Created A Quant Trading Strategy With Claude Code" loading="lazy" style="width:100%;height:158px;object-fit:cover;display:block">
+        <div style="padding:18px 20px">
+          <p style="margin:0 0 6px;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--acc)">Lewis Jackson</p>
+          <h3 style="margin:0 0 8px;font-size:16px;line-height:1.35"><span class="zh">我用 Claude Code 复刻了一套量化交易策略</span><span class="en">I Re-Created A Quant Trading Strategy With Claude Code</span></h3>
+          <p class="zh" style="margin:0;color:var(--dim);font-size:13.5px;line-height:1.5">用 Claude Code + Pine Script 复刻对冲基金的马尔可夫链状态分析,把复杂算法策略自动化。</p>
+          <p class="en" style="margin:0;color:var(--dim);font-size:13.5px;line-height:1.5">Recreating a hedge-fund Markov-chain strategy with Claude Code and Pine Script — sophisticated quant, automated.</p>
+        </div>
+      </a>
+      <a class="case-card" href="https://interview.network/interview/EN7frwQIbKc" target="_blank" rel="noopener" style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column">
+        <img src="https://i.ytimg.com/vi/EN7frwQIbKc/hqdefault.jpg" alt="How To Build A Company With AI From The Ground Up" loading="lazy" style="width:100%;height:158px;object-fit:cover;display:block">
+        <div style="padding:18px 20px">
+          <p style="margin:0 0 6px;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--acc)">Diana · Y Combinator</p>
+          <h3 style="margin:0 0 8px;font-size:16px;line-height:1.35"><span class="zh">如何用 AI 从零搭建一家公司</span><span class="en">How To Build A Company With AI From The Ground Up</span></h3>
+          <p class="zh" style="margin:0;color:var(--dim);font-size:13.5px;line-height:1.5">YC 合伙人视角:把 AI 当公司操作系统,用闭环流程让每个工作流被捕捉、被 agent 持续改进。</p>
+          <p class="en" style="margin:0;color:var(--dim);font-size:13.5px;line-height:1.5">A YC partner on treating AI as the company OS — closed-loop workflows captured and continuously improved by agents.</p>
+        </div>
+      </a>
+      <a class="case-card" href="https://interview.network/interview/xTtynSB1Aak" target="_blank" rel="noopener" style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column">
+        <img src="https://i.ytimg.com/vi/xTtynSB1Aak/hqdefault.jpg" alt="He Skipped Investors and Built a $9M/yr AI Company" loading="lazy" style="width:100%;height:158px;object-fit:cover;display:block">
+        <div style="padding:18px 20px">
+          <p style="margin:0 0 6px;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--acc)">Yasser Elsaid · Chatbase</p>
+          <h3 style="margin:0 0 8px;font-size:16px;line-height:1.35"><span class="zh">他跳过投资人和联合创始人,做出年入 $900 万的 AI 公司</span><span class="en">He Skipped Investors &amp; the Co-Founder, Built a $9M/yr AI Company</span></h3>
+          <p class="zh" style="margin:0;color:var(--dim);font-size:13.5px;line-height:1.5">一个人 bootstrap 一个 AI 聊天机器人平台到年入 $900 万,靠早押注自定义数据集成,全程不融资。</p>
+          <p class="en" style="margin:0;color:var(--dim);font-size:13.5px;line-height:1.5">A solo founder bootstrapped an AI chatbot platform to $9M ARR by betting early on custom data — no fundraising at all.</p>
+        </div>
+      </a>
+      <a class="case-card" href="https://interview.network/interview/GdxLaeyu33c" target="_blank" rel="noopener" style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column">
+        <img src="https://i.ytimg.com/vi/GdxLaeyu33c/hqdefault.jpg" alt="The AI Skills This Solo Founder Uses to Build 5 Apps at Once" loading="lazy" style="width:100%;height:158px;object-fit:cover;display:block">
+        <div style="padding:18px 20px">
+          <p style="margin:0 0 6px;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--acc)">Josh Pigford</p>
+          <h3 style="margin:0 0 8px;font-size:16px;line-height:1.35"><span class="zh">这位 solo 创始人同时做 5 个 App 用的 AI 技能</span><span class="en">The AI Skills This Solo Founder Uses to Build 5 Apps at Once</span></h3>
+          <p class="zh" style="margin:0;color:var(--dim);font-size:13.5px;line-height:1.5">用 AI 模型加自定义自动化脚本,一个人同时开发多个产品、在项目间分配注意力。</p>
+          <p class="en" style="margin:0;color:var(--dim);font-size:13.5px;line-height:1.5">AI models plus custom automation to build and run multiple products at once as a solo technical founder.</p>
+        </div>
+      </a>
+      <a class="case-card" href="https://interview.network/interview/DoUmckt2emk" target="_blank" rel="noopener" style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column">
+        <img src="https://i.ytimg.com/vi/DoUmckt2emk/hqdefault.jpg" alt="I Asked 5 Massively Successful Founders Why They Went Solo" loading="lazy" style="width:100%;height:158px;object-fit:cover;display:block">
+        <div style="padding:18px 20px">
+          <p style="margin:0 0 6px;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--acc)">5 Solo Founders</p>
+          <h3 style="margin:0 0 8px;font-size:16px;line-height:1.35"><span class="zh">我问了 5 位极成功的创始人:为什么选择单干</span><span class="en">I Asked 5 Massively Successful Founders Why They Went Solo</span></h3>
+          <p class="zh" style="margin:0;color:var(--dim);font-size:13.5px;line-height:1.5">solo 创始人用 AI 自动化和个人判断做出高影响力公司 —— 判断的一致性比团队规模更重要。</p>
+          <p class="en" style="margin:0;color:var(--dim);font-size:13.5px;line-height:1.5">Solo founders build high-impact companies with AI — aligned judgment matters more than team size.</p>
+        </div>
+      </a>
+      <a class="case-card" href="https://interview.network/interview/yyXCQHX55N4" target="_blank" rel="noopener" style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column">
+        <img src="https://i.ytimg.com/vi/yyXCQHX55N4/hqdefault.jpg" alt="Emergent: Six Months of Tinkering to a $100M ARR Company" loading="lazy" style="width:100%;height:158px;object-fit:cover;display:block">
+        <div style="padding:18px 20px">
+          <p style="margin:0 0 6px;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--acc)">Mukund Mohan · Emergent</p>
+          <h3 style="margin:0 0 8px;font-size:16px;line-height:1.35"><span class="zh">Emergent:半年折腾出一家 $1 亿 ARR 的公司</span><span class="en">Emergent: Six Months of Tinkering to a $100M ARR Company</span></h3>
+          <p class="zh" style="margin:0;color:var(--dim);font-size:13.5px;line-height:1.5">AI 原生无代码平台,任何人靠对话式 AI agent 构建并部署应用,9 个月做到 $1 亿 ARR、850 万用户。</p>
+          <p class="en" style="margin:0;color:var(--dim);font-size:13.5px;line-height:1.5">An AI-native no-code platform to $100M ARR in nine months — anyone ships apps through conversational agents.</p>
+        </div>
+      </a>
+      <a class="case-card" href="https://interview.network/interview/Zyw-YA0k3xo" target="_blank" rel="noopener" style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column">
+        <img src="https://i.ytimg.com/vi/Zyw-YA0k3xo/hqdefault.jpg" alt="The FDE Playbook for AI Startups with Bob McGrew" loading="lazy" style="width:100%;height:158px;object-fit:cover;display:block">
+        <div style="padding:18px 20px">
+          <p style="margin:0 0 6px;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--acc)">Bob McGrew · ex-OpenAI</p>
+          <h3 style="margin:0 0 8px;font-size:16px;line-height:1.35"><span class="zh">AI 创业的 FDE 打法 · Bob McGrew</span><span class="en">The FDE Playbook for AI Startups with Bob McGrew</span></h3>
+          <p class="zh" style="margin:0;color:var(--dim);font-size:13.5px;line-height:1.5">前沿部署工程师(FDE)模式:把工程师嵌到客户现场做定制,以此驱动产品发现,而非卖一刀切的产品。</p>
+          <p class="en" style="margin:0;color:var(--dim);font-size:13.5px;line-height:1.5">The Frontier Deployed Engineer model — embed engineers at customer sites to drive discovery, not one-size-fits-all.</p>
+        </div>
+      </a>
+      <a class="case-card" href="https://interview.network/interview/-ybWXJnEqPc" target="_blank" rel="noopener" style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column">
+        <img src="https://i.ytimg.com/vi/-ybWXJnEqPc/hqdefault.jpg" alt="The Co-Founder Blood Bond Is a Myth" loading="lazy" style="width:100%;height:158px;object-fit:cover;display:block">
+        <div style="padding:18px 20px">
+          <p style="margin:0 0 6px;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--acc)">Michael Grinich · WorkOS</p>
+          <h3 style="margin:0 0 8px;font-size:16px;line-height:1.35"><span class="zh">联合创始人的"血盟"是个神话</span><span class="en">The Co-Founder "Blood Bond" Is a Myth</span></h3>
+          <p class="zh" style="margin:0;color:var(--dim);font-size:13.5px;line-height:1.5">选一个跟你独特技能契合的方向,比找到完美联合创始人更重要。</p>
+          <p class="en" style="margin:0;color:var(--dim);font-size:13.5px;line-height:1.5">Pick a business idea aligned with your unique skills — that matters more than finding the perfect co-founder.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section style="border-bottom:1px solid var(--line)">
+  <div style="max-width:1080px;margin:0 auto;padding:64px 24px">
+    <p style="margin:0 0 10px;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--acc);letter-spacing:2px">04 / KNOWLEDGE BASE</p>
+    <div class="zh"><h2 style="margin:0 0 8px;font-size:28px;font-weight:900">知识库精选</h2><p style="margin:0 0 28px;color:var(--dim);max-width:640px">会员可通过 Agent 检索全部知识库。以下是公开的几条打法。</p></div>
+    <div class="en"><h2 style="margin:0 0 8px;font-size:28px;font-weight:900">From the knowledge base</h2><p style="margin:0 0 28px;color:var(--dim);max-width:640px">Members search the full KB through the agent. A few public playbooks below.</p></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
+      <div style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;padding:26px">
+        <p style="margin:0 0 10px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--acc)">kb/playbook/last-mile.md</p>
+        <div class="zh"><h3 style="margin:0 0 8px;font-size:17px">打法:vibe coding 之后的最后一公里</h3><p style="margin:0;color:var(--dim);font-size:14.5px">Demo 不等于产品。缺的通常是:部署(域名/服务器/进程守护)、支付(收款通道)、身份(密钥身份免账号)、稳定性(看门狗/日志/备份)。CTO 档就是陪你走完这段。</p></div>
+        <div class="en"><h3 style="margin:0 0 8px;font-size:17px">Playbook: the last mile after vibe coding</h3><p style="margin:0;color:var(--dim);font-size:14.5px">A demo is not a product. What's usually missing: deploys (domain/server/supervision), payments, identity (key-based, no accounts), stability (watchdog/logs/backups). The CTO tier walks it with you.</p></div>
+      </div>
+      <div style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;padding:26px">
+        <p style="margin:0 0 10px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--acc)">kb/playbook/free-to-paid.md</p>
+        <div class="zh"><h3 style="margin:0 0 8px;font-size:17px">打法:免费转付费的开关</h3><p style="margin:0;color:var(--dim);font-size:14.5px">明码标价。不亮价格,你的每次回答都默认免费。价格牌放在页面上,由页面替你报价,关系不伤。先给价值,再给价格链接。</p></div>
+        <div class="en"><h3 style="margin:0 0 8px;font-size:17px">Playbook: the free-to-paid switch</h3><p style="margin:0;color:var(--dim);font-size:14.5px">Put the price on the wall. Without a visible price, every answer you give defaults to free. Let the page quote for you — the relationship stays intact. Value first, then the pricing link.</p></div>
+      </div>
+      <div style="background:var(--panel);border:1px solid var(--line2);border-radius:12px;padding:26px">
+        <p style="margin:0 0 10px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--acc)">kb/pricing/membership.md</p>
+        <div class="zh"><h3 style="margin:0 0 8px;font-size:17px">定价:会员两档</h3><p style="margin:0;color:var(--dim);font-size:14.5px">Online $19/月:Agent 问答不限量、社区、知识库、实时语音(上线后)。CTO $1,000/月起(含 Online):远程 1:1、私有化开源模型部署、私有服务器服务、与项目深度融合;线下会议目前限湾区。</p></div>
+        <div class="en"><h3 style="margin:0 0 8px;font-size:17px">Pricing: two membership tiers</h3><p style="margin:0;color:var(--dim);font-size:14.5px">Online $19/mo: unlimited agent Q&amp;A, community, KB, live voice (at launch). CTO from $1,000/mo (includes Online): remote 1-on-1, private open-source model deployment, private server service, embedded in your project; in-person sessions Bay Area only for now.</p></div>
+      </div>
+    </div>
+    <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap">
+      <a href="index.html#pricing" style="background:var(--acc);color:var(--on-acc);font-weight:800;padding:12px 26px;border-radius:8px;text-decoration:none" class="btn-fill-inline"><span class="zh">查看会员价格 →</span><span class="en">See membership pricing →</span></a>
+      <a href="index.html#contact" class="btn-ghost" style="padding:12px 26px"><span class="zh">问 Agent 试试</span><span class="en">Try the agent</span></a>
+    </div>
+  </div>
+</section>
+
+<footer style="padding:48px 24px;color:var(--dim);font-size:13.5px">
+  <div style="max-width:1080px;margin:0 auto;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center">
+    <div style="display:flex;align-items:center;gap:10px">
+      <svg width="20" height="20" viewBox="0 0 64 64">
+        <line x1="14" y1="14" x2="14" y2="50" stroke="var(--acc-line)" stroke-width="4"></line>
+        <line x1="14" y1="14" x2="50" y2="32" stroke="var(--acc-line)" stroke-width="4"></line>
+        <line x1="14" y1="50" x2="50" y2="32" stroke="var(--acc-line)" stroke-width="4"></line>
+        <circle cx="14" cy="14" r="8" fill="var(--acc)"></circle>
+        <circle cx="14" cy="50" r="8" fill="var(--acc)"></circle>
+        <circle cx="50" cy="32" r="8" fill="var(--acc2)"></circle>
+      </svg>
+      <span style="font-family:'JetBrains Mono',monospace">readyplayer.network · Wei Li (0xli) · <a href="mailto:wli@readyplayer.network">wli@readyplayer.network</a></span>
+    </div>
+    <span>湾区面对面 · 中英双语 · 不承诺投资回报,案例真实可溯源</span>
+  </div>
+</footer>
+
+</body>
+</html>
