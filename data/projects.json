@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "castorprep",
+      "name": "CastorPrep",
+      "url": "https://castorprep.com",
+      "kind": "member",
+      "category": "AI tool",
+      "stage": "earning",
+      "featured": true,
+      "badge": { "zh": "会员项目", "en": "Member" },
+      "summary": {
+        "zh": "面向工程师 NCEES PE 执业考试的备考平台：贴合现行考纲的原创练习题、完整模拟考，以及锚定逐步详解的 AI 导师 Castor。",
+        "en": "NCEES PE exam preparation for engineers — exam-real practice problems with worked solutions, full-length mock exams, and an AI tutor (Castor) grounded in each solution."
+      },
+      "links": []
+    },
+    {
+      "id": "perfit-ai",
+      "name": "PERFIT AI",
+      "url": "https://perfit.ai",
+      "kind": "member",
+      "category": "AI tool",
+      "stage": "launched",
+      "featured": true,
+      "badge": { "zh": "会员项目", "en": "Member" },
+      "summary": {
+        "zh": "自主 AI 创始人工具：在投入数月开发前，自动检索公开证据给出可验证评分、最大风险缺口和下一步客户测试方案。",
+        "en": "Autonomous AI Founder — scans public evidence before you spend months building, returning a confidence score, key risk gaps, and three concrete customer tests."
+      },
+      "links": [
+        {
+          "url": "https://perfit.ai/assessment-result.html?id=38de9fa4-1a00-41dd-af6c-e1ed90313584",
+          "label": { "zh": "查看示例评估 ↗", "en": "Sample assessment ↗" }
+        }
+      ]
+    },
+    {
+      "id": "interview-network",
+      "name": "interview.network",
+      "url": "https://interview.network",
+      "kind": "member",
+      "author": "Wei Li",
+      "category": "content or media",
+      "stage": "earning",
+      "featured": true,
+      "badge": { "zh": "正在收费", "en": "Earning" },
+      "summary": {
+        "zh": "声音克隆与中文配音服务（GPU 打印店模式，按分钟计费），同时精选并配音 YC、Sequoia 与 AI 工具创始人访谈频道。",
+        "en": "Voice cloning and Chinese dubbing on the GPU print-shop model, plus dubbed founder interview channels from YC, Sequoia, and leading AI toolmakers."
+      },
+      "links": [
+        {
+          "url": "https://interview.network/c/startup",
+          "label": { "zh": "创业频道 ↗", "en": "Startup channel ↗" }
+        }
+      ]
+    },
+    {
+      "id": "beagle",
+      "name": "Beagle / decentlan",
+      "url": "https://beagle.chat",
+      "kind": "member",
+      "author": "Wei Li",
+      "category": "developer tool",
+      "stage": "launched",
+      "featured": true,
+      "badge": { "zh": "开源 · npm", "en": "Open · npm" },
+      "summary": {
+        "zh": "无账号 P2P 聊天、语音视频会议与 Agent 网络——密钥即身份，ReadyPlayer 社区与会员服务直接跑在上面。",
+        "en": "Account-free P2P chat, voice/video meetings, and an agent network where your keypair is your identity. ReadyPlayer runs directly on it."
+      },
+      "links": [
+        {
+          "url": "https://app.beagle.chat",
+          "label": { "zh": "网页版 ↗", "en": "Web app ↗" }
+        }
+      ]
+    },
+    {
+      "id": "stocks-workbench",
+      "name": "Stocks Workbench",
+      "url": "https://stocks.gojipower.xyz",
+      "kind": "member",
+      "author": "Wei Li",
+      "category": "AI tool",
+      "stage": "launched",
+      "featured": true,
+      "badge": { "zh": "会员项目", "en": "Member" },
+      "summary": {
+        "zh": "美股研究工作台：集成 TradingView 图表、自选追踪与 AI 辅助投研查询，把看盘和检索合在一个界面里。",
+        "en": "US equities research workbench combining TradingView charts, watchlists, and AI-assisted stock research in one workspace."
+      },
+      "links": []
+    }
+  ]
+}

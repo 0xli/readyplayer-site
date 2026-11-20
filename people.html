@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh" data-lang="zh" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>人物目录 — ReadyPlayer 头号玩家 | People</title>
+<meta name="description" content="ReadyPlayer 社区成员与编辑精选人物：用 AI 工具创业与建设的同行者。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cline x1='14' y1='14' x2='14' y2='50' stroke='%232ea043' stroke-width='4'/%3E%3Cline x1='14' y1='14' x2='50' y2='32' stroke='%232ea043' stroke-width='4'/%3E%3Cline x1='14' y1='50' x2='50' y2='32' stroke='%232ea043' stroke-width='4'/%3E%3Ccircle cx='14' cy='14' r='8' fill='%233fb950'/%3E%3Ccircle cx='14' cy='50' r='8' fill='%233fb950'/%3E%3Ccircle cx='50' cy='32' r='8' fill='%2358a6ff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=20261119">
+<script src="assets/site.js?v=20261119"></script>
+<script src="assets/beagle.js"></script>
+<script src="assets/directory.js?v=20261118" defer></script>
+</head>
+<body>
+<a href="#content" class="skip-link visually-hidden"><span class="zh">跳到正文</span><span class="en">Skip to content</span></a>
+
+<nav aria-label="Primary" style="position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)">
+  <div class="navbar-inner" style="max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:24px">
+    <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--txt)">
+      <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true">
+        <line x1="14" y1="14" x2="14" y2="50" stroke="var(--acc-line)" stroke-width="4"></line>
+        <line x1="14" y1="14" x2="50" y2="32" stroke="var(--acc-line)" stroke-width="4"></line>
+        <line x1="14" y1="50" x2="50" y2="32" stroke="var(--acc-line)" stroke-width="4"></line>
+        <circle cx="14" cy="14" r="8" fill="var(--acc)"></circle>
+        <circle cx="14" cy="50" r="8" fill="var(--acc)"></circle>
+        <circle cx="50" cy="32" r="8" fill="var(--acc2)"></circle>
+      </svg>
+      <span style="font-family:'JetBrains Mono',monospace;font-weight:800;font-size:15px;letter-spacing:.5px">READYPLAYER<span style="color:var(--dim);font-weight:400">.network</span></span>
+    </a>
+    <div class="navbar-links" style="flex:1;display:flex;gap:20px;justify-content:flex-end;align-items:center;font-size:14px">
+      <a href="projects.html" class="navlink"><span class="zh">项目</span><span class="en">Projects</span></a>
+      <a href="people.html" class="navlink" aria-current="page"><span class="zh">人物</span><span class="en">People</span></a>
+      <a href="cases.html" class="navlink nav-sm-hide"><span class="zh">案例与知识库</span><span class="en">Cases &amp; KB</span></a>
+      <a href="index.html#pricing" class="navlink nav-sm-hide"><span class="zh">会员</span><span class="en">Membership</span></a>
+      <a href="index.html#contact" class="nav-cta"><span class="zh">问 Agent ▸</span><span class="en">Ask the Agent ▸</span></a>
+    </div>
+    <div class="navbar-controls" style="display:flex;align-items:center;gap:10px">
+      <div style="display:flex;border:1px solid var(--line3);border-radius:6px;overflow:hidden;font-family:'JetBrains Mono',monospace;font-size:12px">
+        <button class="langbtn zh-btn" type="button" onclick="rpSetLang('zh')">中</button>
+        <button class="langbtn en-btn" type="button" onclick="rpSetLang('en')">EN</button>
+      </div>
+      <button class="themebtn" type="button" onclick="rpToggleTheme()" aria-label="Toggle color theme"><span class="ic-dark">☀</span><span class="ic-light">☾</span></button>
+      <a href="https://app.readyplayer.network/" class="navlink nav-me" id="rp-signin"><span class="zh">登录</span><span class="en">Sign in</span></a>
+    </div>
+  </div>
+</nav>
+
+<main id="content">
+<header style="border-bottom:1px solid var(--line);background:radial-gradient(ellipse 900px 380px at 80% -10%, var(--glow2), transparent)">
+  <div style="max-width:1080px;margin:0 auto;padding:64px 24px 52px">
+    <p style="margin:0 0 12px;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--acc);letter-spacing:2px">DIRECTORY / PEOPLE</p>
+    <h1 style="margin:0;font-size:38px;font-weight:900"><span class="zh">社区成员与精选人物</span><span class="en">Members &amp; Featured Builders</span></h1>
+    <p class="zh" style="margin:14px 0 0;color:var(--body);max-width:640px;text-wrap:pretty">在这张网络上做东西、创业和共享经验的人——包括 ReadyPlayer 成员与编辑部精选的 AI 时代建设者。</p>
+    <p class="en" style="margin:14px 0 0;color:var(--body);max-width:640px;text-wrap:pretty">Founders, engineers, and builders on the network — ReadyPlayer members alongside editor's picks across the AI era.</p>
+  </div>
+</header>
+
+<section style="border-bottom:1px solid var(--line)">
+  <div style="max-width:1080px;margin:0 auto;padding:48px 24px 72px">
+    <div class="filter-bar">
+      <div class="filter-group" id="people-filters" role="group" aria-label="Filter people">
+        <button class="filter-btn" type="button" data-filter="all" aria-pressed="true"><span class="zh">全部</span><span class="en">All</span></button>
+        <button class="filter-btn" type="button" data-filter="member" aria-pressed="false"><span class="zh">会员</span><span class="en">Members</span></button>
+        <button class="filter-btn" type="button" data-filter="editor" aria-pressed="false"><span class="zh">编辑精选</span><span class="en">Editor's Choice</span></button>
+      </div>
+      <p class="filter-count" id="people-status" aria-live="polite"></p>
+    </div>
+
+    <div class="dir-grid" data-directory="people" data-filters="people-filters" data-status="people-status">
+      <p class="dir-empty"><span class="zh">正在加载人物目录…</span><span class="en">Loading people…</span></p>
+    </div>
+
+    <div style="margin-top:40px;background:var(--panel);border:1px solid var(--line2);border-radius:12px;padding:24px 26px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap">
+      <div style="max-width:600px">
+        <h2 style="margin:0 0 6px;font-size:19px;font-weight:800"><span class="zh">加入名录，让同行找到你</span><span class="en">Join the directory</span></h2>
+        <p class="zh" style="margin:0;color:var(--dim);font-size:14.5px">登录会员页完善资料后，你的名片与在做的事可以被其他会员和撮合 Agent 发现。</p>
+        <p class="en" style="margin:0;color:var(--dim);font-size:14.5px">Sign in to the member app and complete your profile so peers and the matching agent can find what you build.</p>
+      </div>
+      <a href="https://app.readyplayer.network/" class="btn-acc" style="padding:11px 22px;font-size:14.5px"><span class="zh">加入 ReadyPlayer ▸</span><span class="en">Join ReadyPlayer ▸</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer style="padding:48px 24px;color:var(--dim);font-size:13.5px">
+  <div style="max-width:1080px;margin:0 auto;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center">
+    <div style="display:flex;align-items:center;gap:10px">
+      <svg width="20" height="20" viewBox="0 0 64 64" aria-hidden="true">
+        <line x1="14" y1="14" x2="14" y2="50" stroke="var(--acc-line)" stroke-width="4"></line>
+        <line x1="14" y1="14" x2="50" y2="32" stroke="var(--acc-line)" stroke-width="4"></line>
+        <line x1="14" y1="50" x2="50" y2="32" stroke="var(--acc-line)" stroke-width="4"></line>
+        <circle cx="14" cy="14" r="8" fill="var(--acc)"></circle>
+        <circle cx="14" cy="50" r="8" fill="var(--acc)"></circle>
+        <circle cx="50" cy="32" r="8" fill="var(--acc2)"></circle>
+      </svg>
+      <span style="font-family:'JetBrains Mono',monospace">readyplayer.network · Wei Li (0xli) · <a href="mailto:wli@readyplayer.network">wli@readyplayer.network</a></span>
+    </div>
+    <span><a href="/privacy"><span class="zh">隐私政策</span><span class="en">Privacy</span></a> · <a href="/terms"><span class="zh">服务条款</span><span class="en">Terms</span></a></span>
+  </div>
+</footer>
+
+</body>
+</html>

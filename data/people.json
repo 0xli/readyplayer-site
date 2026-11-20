@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "wei-li",
+      "name": "Wei Li",
+      "handle": "0xli",
+      "url": "https://www.linkedin.com/in/0xl/",
+      "kind": "member",
+      "role": "founder",
+      "featured": true,
+      "badge": { "zh": "发起人 · 会员", "en": "Founder · Member" },
+      "location": { "zh": "湾区", "en": "Bay Area" },
+      "headline": {
+        "zh": "ReadyPlayer · Decent Network / Beagle 发起人",
+        "en": "Founder, ReadyPlayer & Decent Network / Beagle"
+      },
+      "bio": {
+        "zh": "20+ 年 AI、P2P 网络与区块链全栈工程经验，专注帮独立创业者和一人公司把 AI 原型变成能长期运行、能收钱的生产系统。",
+        "en": "20+ years full-stack across AI, P2P networking, and blockchain — helping solo founders turn AI prototypes into production systems that earn."
+      },
+      "links": [
+        { "kind": "linkedin", "label": "LinkedIn ↗", "url": "https://www.linkedin.com/in/0xl/" },
+        { "kind": "github", "label": "GitHub ↗", "url": "https://github.com/0xli" }
+      ]
+    },
+    {
+      "id": "james-wen",
+      "name": "James Wen",
+      "url": "https://www.linkedin.com/in/james-wen-3931241a/",
+      "kind": "member",
+      "role": "founder",
+      "featured": true,
+      "badge": { "zh": "会员", "en": "Member" },
+      "location": { "zh": "湾区", "en": "Bay Area" },
+      "headline": {
+        "zh": "AI 创业者与建设者",
+        "en": "AI Founder & Builder"
+      },
+      "bio": {
+        "zh": "湾区创业者与 ReadyPlayer 社区成员，在 AI 产品与创业方向持续建设。",
+        "en": "Bay Area founder and ReadyPlayer member building in AI."
+      },
+      "links": [
+        { "kind": "linkedin", "label": "LinkedIn ↗", "url": "https://www.linkedin.com/in/james-wen-3931241a/" }
+      ]
+    },
+    {
+      "id": "terry-song",
+      "name": "Terry Song",
+      "url": "https://www.linkedin.com/in/terrysong124/",
+      "kind": "member",
+      "role": "founder",
+      "featured": true,
+      "badge": { "zh": "会员", "en": "Member" },
+      "location": { "zh": "湾区", "en": "Bay Area" },
+      "headline": {
+        "zh": "AI 创业者与建设者",
+        "en": "AI Founder & Builder"
+      },
+      "bio": {
+        "zh": "ReadyPlayer 社区成员，专注 AI 时代的产品与实践。",
+        "en": "ReadyPlayer member building and shipping products for the AI era."
+      },
+      "links": [
+        { "kind": "linkedin", "label": "LinkedIn ↗", "url": "https://www.linkedin.com/in/terrysong124/" }
+      ]
+    }
+  ]
+}
